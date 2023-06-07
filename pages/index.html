@@ -17,4 +17,136 @@
      <script src="../js/index.js"></script>
 
     <title>Term 2: Task 5</title>
+</head>
+<body>
+
+  <form id="pizzaForm" onchange="realTimeCost">
+    <h3>Custom Pizza Maker</h3>
+    <div class="left">
+      <input type="text" class="form-control" placeholder="Name Your Pizza" id="pizzaName">
+      <select class="form-control" id="size">
+        <option>Choose a Size</option>
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select>
+    </div>
+
+    <div class="right">
+      <div class="orderCost" id="realTimeCost">R0.00</div>
+    </div>
+
+      <div class="base-options">
+
+        <h3>Base Options</h3>
+
+        <div class="base-checked">
+          <input class="form-check-input" type="radio" name="baseRadio" id="standard" data-cost="10" value="Standard" checked>
+          <label class="form-check-label" for="standard">
+            Standard Base
+          </label>
+        </div>
+
+        <div class="base-check">
+          <input class="form-check-input" type="radio" name="baseRadio" id="deep" data-cost="15" value="Deep Dish">
+          <label class="form-check-label" for="deep">
+            Deep Dish Base
+          </label>
+        </div>
+
+        <div class="base-check">
+          <input class="form-check-input" type="radio" name="baseRadio" id="thin" data-cost="20" value="Thin & Crispy">
+          <label class="form-check-label" for="thin">
+            Thin & Crispy Base
+          </label>
+        </div>
+
+      </div>
+
+      <div class="toppings">
+        <h3>Topping Options</h3>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="salami" id="salami" data-cost="15">
+          <label class="form-check-label" for="salami">
+            Salami
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="olives" id="olives" data-cost="10">
+          <label class="form-check-label" for="olives">
+            Olives
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="feta" id="feta" data-cost="8">
+          <label class="form-check-label" for="feta">
+            Feta
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="pineapple" id="pineapple" data-cost="12">
+          <label class="form-check-label" for="mushroom">
+            Mushroom
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="ham" id="ham" data-cost="17">
+          <label class="form-check-label" for="ham">
+            Ham
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="bacon" id="bacon" data-cost="20">
+          <label class="form-check-label" for="bacon">
+            Bacon
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="anchovies" id="anchovies" data-cost="14">
+          <label class="form-check-label" for="anchovies">
+            Anchovies
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="extra" id="extra" data-cost="18">
+          <label class="form-check-label" for="extra">
+            Extra Cheese
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="toppings" type="checkbox" value="chilles" id="chilles" data-cost="12">
+          <label class="form-check-label" for="chilles">
+            Chillies
+          </label>
+        </div>
+
+        </div>
+        <button class="btn btn-primary" type="button" onclick="makePizza(); displayOrder()" >Make My Pizza</button>    
+
+      </form>
+
+  <div class="output">
+    <div class="outHeader">
+      <h3>Your Current Order:</h3>
+      <div class="totalOrder"><h3 id="orderTotal">R0.00</h3></div>
+    </div>
+
+    <div id="orders">
+
+    </div>
+    
+
+  </div>
+  
+</body>
+</html>
     
